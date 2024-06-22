@@ -1,0 +1,66 @@
+main{
+background-color: brown;
+  background-position: center;
+  width: 100%;
+  
+}
+
+li{
+  display: inline-block;
+  padding: 50px;
+  margin-left: 60px;
+  transition: 3s;
+  list-style-type: none;
+  margin-top: 80px;
+}
+img{
+  height: 255px;
+}
+li :hover{
+  transform: scale(1.009);
+}
+header{
+  background-color: rgb(233, 219, 219);
+  font-style: italic;
+  text-align: center;
+  color: aqua;
+  background-color: 14141B;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 1%;
+}
+
+
+.footer p{
+  font-size: 25px;
+  text-align: center;
+  font-style: italic;
+  color: aqua;
+  background-color: 14141B;
+  padding: 10px;
+}
+
+.card audio{
+  width: 100%;
+}
+
+ .box{
+  position: absolute;
+  width: 9.99%;
+  height: 30px;
+  right: 150px;
+  top: 5px;
+
+}
+
+.container-fluid{
+  color: rgb(25, 118, 194);
+  position: absolute;
+
+}
+.dropdown-menu li {
+  padding: 0.1px;
+  margin: 0.1px;
+}
