@@ -1,8 +1,9 @@
 main{
 background-color: brown;
   background-position: center;
-  width: 100%;
-  
+  /* width: 100%; */
+  background-size: 100% 100%; 
+  background-attachment: fixed; 
 }
 
 li{
@@ -52,6 +53,7 @@ header{
   height: 30px;
   right: 150px;
   top: 5px;
+  /* text-align: center; */
 
 }
 
@@ -63,4 +65,16 @@ header{
 .dropdown-menu li {
   padding: 0.1px;
   margin: 0.1px;
+}
+.musicInfomodal{
+ text-align: center;
+ display: inline-block;
+}
+
+.close{
+color: blue;
+font-size: 12px;
+}
+#audio-controls{
+  width: 15%;
 }

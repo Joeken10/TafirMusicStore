@@ -1,0 +1,10 @@
+DOM - Document object Model
+accessing element, Modifying element and creating element
+create elements - .createElement()
+variable_name.innerHTML = ``; - allows you to incoparate html to javascript in raw
+style
+appendChild() - appends node element to the parent
+closure - having a parent function that has a child function we need to use the variables assigned to the parent function
+events - change state of application
+click, submit, keyup,
+.addEventListener("<event_type(click,submit)>", () =>{})
