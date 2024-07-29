@@ -8,3 +8,17 @@ closure - having a parent function that has a child function we need to use the 
 events - change state of application
 click, submit, keyup,
 .addEventListener("<event_type(click,submit)>", () =>{})
+
+# JSON Server {Two types}
+-micro service - registration, music service(API application programming interface)
+-monolithic everything set in one folder (django, laravel,mvc,mvt)
+
+# JSON Server  -npm intall -g json-server
+db.json -
+HTTP hypertext transfer protocal (POST, DELETE, PUT/PATCH )
+postman
+json server
+fetch helps retrive data from api("<api url>").then("<response>")=>{}
+
+# fetch (<"api url">).then("<response> => response.json()").then(data =>)
+event - submit event

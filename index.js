@@ -1,99 +1,150 @@
 let musicContainer = document.getElementById("musicList-container");
-let modalContainer = document.getElementById("myModal");
+let modalOpen = document.getElementById("myModal");
 let modalClose = document.getElementById("modal-close");
-let musicList = [
-  {
-    id: 1,
-    musicImageLink:
-      "/TafirMusicStore/Store/chronixx 2024-06-21 at 17.24.30_72a84388.jpg",
-    musicTitle: "Black is beautiful",
-    artistName: "Chronixx",
-    audioLink:
-      "/TafirMusicStore/Store/Chronixx 2024-06-21 at 16.49.20_700d0573.mp3",
-  },
-  {
-    class: 2,
-    musicImageLink:
-      "/TafirMusicStore/Store/Da baby 2024-06-21 at 17.51.29_8754dee9.jpg",
-    musicTitle: "Rockstar",
-    artistName: "Da Baby",
-    audioLink:
-      "/TafirMusicStore/Store/Da baby Audio 2024-06-21 at 17.45.59_f9c65e48.mp3",
-  },
-  {
-    id: 3,
-    musicImageLink: "/TafirMusicStore/Store/Jadakiss.jpg",
-    musicTitle: "Lord give me a sign",
-    artistName: "Jadakiss ft DMX",
-    audioLink:
-      "/TafirMusicStore/Store/DMX Jadakiss 2024-06-19 at 12.08.54_58df01c7.mp3",
-  },
-  {
-    id: 4,
-    musicImageLink:
-      "/TafirMusicStore/Store/Feels 2024-06-21 at 17.24.32_2373d321.jpg",
-    musicTitle: "Feels",
-    artistName: "Pharell Williams ft Calvin Harris",
-    audioLink:
-      "/TafirMusicStore/Store/Feels 2024-06-21 at 16.43.54_be78b614.mp3",
-  },
-  {
-    id: 5,
-    musicImageLink: "/TafirMusicStore/Store/sia 1.jpg",
-    musicTitle: "California Dreaming",
-    artistName: "Sia",
-    audioLink: "/TafirMusicStore/Store/Sia 2024-06-19 at 11.59.04_008aa38b.mp3",
-  },
-  {
-    id: 6,
-    musicImageLink: "/TafirMusicStore/Store/Sia 2_.jpg",
-    musicTitle: "Genius",
-    artistName: "Sia",
-    audioLink:
-      "/TafirMusicStore/Store/Sia Lsd Audio 2024-06-19 at 15.28.25_eef911c9.mp3",
-  },
-];
-function displayMusicAlbum() {
-  musicList.map((musicItem) => {
-    let albumCard = document.createElement("li");
-    console.log(albumCard);
-    albumCard.innerHTML = `
-    <div class="card" style="width: 18rem;">
-          <img src="${musicItem.musicImageLink}" class="card-img-top"
-            alt="music-album">
-          <div class="card-body">
-            <h5 class="card-title">${musicItem.musicTitle}</h5>
-            <p class="card-text">${musicItem.artistName}</p>
-          
-          </div>
-     </div>
-          `;
-    function selectMusicItem() {
-      function openModal() {
-        let modalContent = document.getElementById("modal-info");
-        modalContainer.style.display = "block";
-        modalContent.innerHTML = `
-        <div class="image-container">
-                  <img src="${musicItem.musicImageLink}" alt="album-image" />
+let musicFormAdd = document.getElementById("musicSubmit-form");
+let musicUpdateModal = document.getElementById("updateMusicModal");
+let updateAlbumForm = document.getElementById("musicUpdate-form");
+
+function displayData() {
+  fetch("http://localhost:3000/musicList")
+    .then((response) => response.json())
+    .then((data) => {
+      data.map((item) => {
+        let albumCard = document.createElement("li");
+        albumCard.innerHTML = `
+          <div class="card">
+              <img src="${item.albumImage}" class="card-img-top" alt="music-album-image">
+              <div class="card-body">
+                  <h5 class="card-title">${item.albumTitle}</h5>
+                  <p class="card-text">${item.albumArtist}</p>
               </div>
-              <div class="music-information">
-                  <h5>${musicItem.musicTitle}</h5>
-                  <p class="card-text">${musicItem.artistName}</p>
-                  <audio controls id ="audio-controls">
-                      <source src="${musicItem.audioLink}"  type="audio/mpeg" /></audio>
-        </div>
-              `;
-      }
-      function closeModal() {
-        modalContainer.style.display = "none";
-        document.getElementById("audio-controls").src = ""
-        
-      }
-      albumCard.addEventListener("click",openModal);
-      modalClose.addEventListener("click", closeModal);
-    }
-    selectMusicItem(musicItem.id);
-    musicContainer.appendChild(albumCard);
+          </div>
+        `;
+        function displayModal() {
+          function openModal() {
+            let modalContent = document.getElementById("modal-info");
+            modalOpen.style.display = "block";
+            modalContent.innerHTML = `
+            <div class="image-container">
+                <img src="${item.albumImage}" alt="album-image" />
+            </div>
+            <div class="music-information">
+                <h5>${item.albumTitle}</h5>
+                <p class="card-text">${item.albumArtist}</p>
+                <audio controls>
+                    <source src="${item.albumTrack}"
+                        type="audio/mpeg" />
+                </audio>
+                <button type="button" class="btn btn-secondary" data-id=${item.id}>Edit</button>
+                <button type="button" class="btn btn-danger" data-id=${item.id}>Delete</button>
+            </div>
+            `;
+          }
+
+          function closeModal() {
+            modalOpen.style.display = "none";
+          }
+          albumCard.addEventListener("click", openModal);
+          modalClose.addEventListener("click", closeModal);
+        }
+        displayModal(item.id);
+        musicContainer.appendChild(albumCard);
+      });
+    });
+}
+
+function addMusicForm(event) {
+  event.preventDefault();
+
+  let albumImage = document.getElementById("addAlbum-image").value;
+  let albumTitle = document.getElementById("addAlbum-title").value;
+  let albumArtist = document.getElementById("addArtist-name").value;
+  let albumTrack = document.getElementById("addMusic-link").value;
+
+  let musicInfo = {
+    albumImage,
+    albumTitle,
+    albumArtist,
+    albumTrack,
+  };
+
+  fetch("http://localhost:3000/musicList", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(musicInfo),
+  })
+    .then((response) => response.json())
+    .then((data) => data);
+}
+
+function deleteMusicItem(id) {
+  fetch(`http://localhost:3000/musicList/${id}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
   });
 }
-displayMusicAlbum();
+
+modalOpen.addEventListener("click", (event) => {
+  if (event.target.classList.contains("btn-danger")) {
+    const musicId = event.target.dataset.id;
+    deleteMusicItem(musicId);
+  } else {
+    event.target.classList.contains("btn-secondary");
+    const updateMusicId = event.target.dataset.id;
+    updateForm(updateMusicId);
+  }
+});
+
+function updateForm(id) {
+  let modalClose = document.getElementById("updateModal-close");
+
+  modalOpen.style.display = "none";
+  musicUpdateModal.style.display = "block";
+
+  fetch("http://localhost:3000/musicList")
+    .then((response) => response.json())
+    .then((data) => {
+      let musicItemId = data.find((music) => music.id === id);
+      document.getElementById("form-id").value = musicItemId.id;
+      document.getElementById("album-image").value = musicItemId.albumImage;
+      document.getElementById("album-name").value = musicItemId.albumTitle;
+      document.getElementById("artist-name").value = musicItemId.albumArtist;
+      document.getElementById("album-link").value = musicItemId.albumTrack;
+    });
+
+  function closeModal() {
+    musicUpdateModal.style.display = "none";
+  }
+  modalClose.addEventListener("click", closeModal);
+}
+
+function updateMusicForm(event) {
+  event.preventDefault();
+
+  let musicId = document.getElementById("form-id").value;
+  let albumImage = document.getElementById("album-image").value;
+  let albumTitle = document.getElementById("album-name").value;
+  let albumArtist = document.getElementById("artist-name").value;
+  let albumTrack = document.getElementById("album-link").value;
+
+  let musicInfo = {
+    musicId,
+    albumImage,
+    albumTitle,
+    albumArtist,
+    albumTrack,
+  };
+
+  fetch(`http://localhost:3000/musicList/${musicId}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(musicInfo),
+  })
+    .then((response) => response.json())
+    .then((data) => data);
+}
+
+updateAlbumForm.addEventListener("submit", updateMusicForm);
+musicFormAdd.addEventListener("submit", addMusicForm);
+
+displayData();

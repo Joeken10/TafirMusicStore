@@ -2,188 +2,137 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Tafir Music Store</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<header>
-  <h1>Tafir Music Store</h1>
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
-      <!-- <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li> -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Tafir music
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Add album</a></li>
-          <li><a class="dropdown-item" href="#">Add a single</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item" href="#">Add Best music</a></li>
-        </ul>
-      </li>
-      <!-- <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li> -->
-      </ul>
-      <!-- <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">search</button>
-          </form> -->
-    </div>
-    </div>
-  </nav>
-</header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafir Music Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="musicContainer">
-  <main>
-
-    <ul class="music-list" id="musicList-container">
-       <!-- <li>
-        <div class="card" style="width: 18rem;">
-          <img src="/TafirMusicStore/Store/chronixx 2024-06-21 at 17.24.30_72a84388.jpg" class="card-img-top"
-            alt="music-album">
-          <div class="card-body">
-            <h5 class="card-title">Black is beautiful</h5>
-            <p class="card-text">Chronixx</p>
-            <a href="#" class="btn btn-primary"></a>
-            <audio controls>
-              <source src="/TafirMusicStore/Store/Chronixx 2024-06-21 at 16.49.20_700d0573.mp3">
-            </audio>
-
-          </div>
-        </div>
-       </li>
-       <li>
-        <div class="card" style="width: 18rem;">
-          <img src="/TafirMusicStore/Store/Da baby 2024-06-21 at 17.51.29_8754dee9.jpg" class="card-img-top"
-            alt="music-album">
-          <div class="card-body">
-            <h5 class="card-title">Rockstar</h5>
-            <p class="card-text">Da Baby</p>
-            <a href="#" class="btn btn-primary"></a>
-            <audio controls>
-              <source src="/TafirMusicStore/Store/Da baby Audio 2024-06-21 at 17.45.59_f9c65e48.mp3">
-            </audio>
-          </div>
-        </div>
-       </li>
-       <li>
-        <div class="card" style="width: 18rem;">
-          <img src="/TafirMusicStore/Store/Jadakiss.jpg" class="card-img-top" alt="music-album">
-          <div class="card-body">
-            <h5 class="card-title">Lord give me a sign</h5>
-            <p class="card-text">Jadakiss ft DMX</p>
-            <a href="#" class="btn btn-primary"></a>
-            <audio controls>
-              <source src="/TafirMusicStore/Store/DMX Jadakiss 2024-06-19 at 12.08.54_58df01c7.mp3">
-            </audio>
-          </div>
-        </div>
-       </li>
-       <li>
-        <div class="card" style="width: 18rem;">
-          <img src="/TafirMusicStore/Store/Feels 2024-06-21 at 17.24.32_2373d321.jpg" class="card-img-top"
-            alt="music-album">
-          <div class="card-body">
-            <h5 class="card-title">Feels</h5>
-            <p class="card-text">Pharell Williams ft Calvin Harris</p>
-            <a href="#" class="btn btn-primary"></a>
-            <audio controls>
-              <source src="/TafirMusicStore/Store/Feels 2024-06-21 at 16.43.54_be78b614.mp3">
-            </audio>
-          </div>
-        </div>
-       </li>
-       <li>
-        <div class="card" style="width: 18rem;">
-          <img src="/TafirMusicStore/Store/sia 1.jpg" class="card-img-top" alt="music-album">
-          <div class="card-body">
-            <h5 class="card-title">California Dreaming</h5>
-            <p class="card-text">Sia</p>
-            <a href="#" class="btn btn-primary"></a>
-            <audio controls>
-              <source src="/TafirMusicStore/Store/Sia 2024-06-19 at 11.59.04_008aa38b.mp3">
-            </audio>
-          </div>
-        </div>
-       </li>
-       <li>
-        <div class="card" style="width: 18rem;">
-          <img src="/TafirMusicStore/Store/Sia 2_.jpg" class="card-img-top" alt="music-album">
-          <div class="card-body">
-            <h5 class="card-title">Genius</h5>
-            <p class="card-text">Sia</p>
-            <a href="#" class="btn btn-primary"></a>
-            <audio controls>
-              <source src="/TafirMusicStore/Store/Sia Lsd Audio 2024-06-19 at 15.28.25_eef911c9.mp3">
-            </audio>
-          </div>
-        </div>
-       </li> -->
-    </ul>
-    
-    <!-- display music content on a modal -->
-    <div id="myModal" class="musicInfomodal">
-      <div class="musicModal-content" >
-        <span class="close" id="modal-close">
-          <i class="fa fa-times" aria-hidden="true"></i>
-      </span>  
-          <div class="modal-info" id="modal-info" >
-              <div class="image-container" style="width: 18rem;">
-                
-                <!-- <img src="/TafirMusicStore/Store/Sia 2_.jpg" class="card-img-top" alt="music-album">
-                <div class="card-body">
-                  <h5 class="card-title">Genius</h5>
-                  <p class="card-text">Sia</p>
-                  <a href="#" class="btn btn-primary"></a>
-                  <audio controls id ="audio-controls">
-                    <source src="/TafirMusicStore/Store/Sia Lsd Audio 2024-06-19 at 15.28.25_eef911c9.mp3">
-                  </audio>
+    <div class="musicContainer">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <span>Tafir</span><br>
+                        Music Store
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <form class="d-flex search-carsForm" role="search" id="search-carsForm">
+                            <input class="form-control me-2" id="search-input" type="search" placeholder="Search music"
+                                aria-label="Search">
+                        </form>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#addMusicForm">
+                                    Add Music
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            
-              </div> -->
-          </div>
-      </div>
-  </div>
-</div>
-  </main>
-</div>
-  <footer class="footer">
-    <p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#264E5B">
-        <path
-          d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm34-102 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm-42 142 226-226-56-58-170 170-86-84-56 56 142 142Z" />
-      </svg>Tafir Music Store &trade; </p>
-   
-  </footer>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-    
+            </nav>
+        </header>
+        <main>
+            <ul class="music-list-category">
+                <li>Mixes</li>
+                <li>Hip Hop</li>
+                <li>Indie Pop </li>
+            </ul>
+            <ul class="music-list" id="musicList-container">
+                
+            </ul>
+
+            <!-- display music content on a modal -->
+            <div id="myModal" class="musicInfomodal">
+                <div class="musicModal-content">
+                    <span class="close" id="modal-close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+                    <div class="modal-info" id="modal-info">
+                        <div class="image-container">
+                            <img src="/TafirMusicStore/Store/chronixx 2024-06-21 at 17.24.30_72a84388.jpg" alt="album-image" />
+                        </div>
+                        <div class="music-information">
+                            <h5>Black is beautiful</h5>
+                            <p class="card-text">Chronixx</p>
+                            <audio controls>
+                                <source src="/TafirMusicStore/Store/Chronixx 2024-06-21 at 16.49.20_700d0573.mp3"
+                                    type="audio/mpeg" />
+                            </audio>
+                            <button type="btn btn-danger" class="delete-button" id="delete-button">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- add music form modal -->
+            <div class="modal fade" id="addMusicForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Music Form</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="musicSubmit-form" id="musicSubmit-form">
+                                <input type="text" placeholder="Enter album image url" id="addAlbum-image"
+                                    name="albumImage" required />
+                                <input type="text" placeholder="Enter album title" id="addAlbum-title" name="albumTitle"
+                                    required />
+                                <input type="text" placeholder="Enter artist name" id="addArtist-name"
+                                    name="albumArtist" required />
+                                <input type="text" placeholder="Enter music link" id="addMusic-link" name="albumLink"
+                                    required />
+                                <input type="submit" value="Submit" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- update music form modal -->
+            <div id="updateMusicModal" class="musicUpdatemodal">
+                <div class="musicModal-content">
+                    <span class="close" id="updateModal-close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </span>
+                    <div class="modal-info" id="modal-info">
+                        <h1>Update Music Album Details</h1>
+                        <form class="musicSubmit-form" id="musicUpdate-form">
+                            <input type="text" id="form-id" hidden />
+                            <label for="music-image">Music Image Url</label>
+                            <input type="text" placeholder="Enter album image url" id="album-image" name="albumImage" />
+                            <label for="album-name">Album Name</label>
+                            <input type="text" placeholder="Enter album name" id="album-name" name="albumName" />
+                            <label for="artist-details">Artist Name</label>
+                            <input type="text" placeholder="Enter artist name" id="artist-name" name="artistName" />
+                            <label for="music-link">Music Link</label>
+                            <input type="text" placeholder="Enter album link" id="album-link" name="albumLink" />
+                            <input type="submit" value="Submit" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="footer">
+            <p>&copy; 2024 Tafir Music Store</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="index.js"></script>
-  
-    
 </body>
 
 </html>

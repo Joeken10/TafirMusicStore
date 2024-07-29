@@ -1,80 +1,237 @@
-main{
-background-color: brown;
-  background-position: center;
-  /* width: 100%; */
-  background-size: 100% 100%; 
-  background-attachment: fixed; 
+* {
+  top: 0;
+  margin: 0;
+  padding: 0;
 }
 
-li{
-  display: inline-block;
-  padding: 50px;
-  margin-left: 60px;
-  transition: 3s;
-  list-style-type: none;
-  margin-top: 80px;
+.navbar {
+  background-color: #fff !important;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
-img{
-  height: 255px;
-}
-li :hover{
-  transform: scale(1.009);
-}
-header{
-  background-color: rgb(233, 219, 219);
-  font-style: italic;
+
+.navbar-brand {
   text-align: center;
-  color: aqua;
-  background-color: 14141B;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar a {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.navbar .search-carsForm {
+  width: 400px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #333;
   position: fixed;
-  width: 100%;
-  z-index: 100;
-  margin-bottom: 1%;
+  z-index: 1;
 }
 
-
-.footer p{
-  font-size: 25px;
+header h1 {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fff;
   text-align: center;
-  font-style: italic;
-  color: aqua;
-  background-color: 14141B;
-  padding: 10px;
+  padding: 12px;
 }
 
-.card audio{
+main {
+  margin-top: 115px;
   width: 100%;
 }
 
- .box{
-  position: absolute;
-  width: 9.99%;
-  height: 30px;
-  right: 150px;
-  top: 5px;
-  /* text-align: center; */
+.music-list-category {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.music-list-category li {
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.music-list {
+  margin-left: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.music-list .card {
+  width: 250px;
+  cursor: pointer;
+}
+
+.music-list .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.music-list .card h5 {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+.music-list .card p {
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+.music-list audio {
+  width: 100%;
+}
+
+.music-tile {
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 400px;
+}
+
+.music-tile img {
+  width: 100px;
+  height: 100px;
+}
+
+.musicInfomodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.musicModal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.musicModal-content .close {
+  color: #aaa;
+  float: left;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.musicModal-content .close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+
+.musicModal-content .modal-info {
+  margin: 0 auto;
+  width: 90%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
 
 }
 
-.container-fluid{
-  color: rgb(25, 118, 194);
-  position: absolute;
-
-}
-.dropdown-menu li {
-  padding: 0.1px;
-  margin: 0.1px;
-}
-.musicInfomodal{
- text-align: center;
- display: inline-block;
+.modal-info .image-container {
+  width: 100%;
 }
 
-.close{
-color: blue;
-font-size: 12px;
+.modal-info .image-container img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
-#audio-controls{
-  width: 15%;
+
+.musicSubmit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.musicSubmit-form input[type="text"],
+textarea {
+  padding-left: 8px;
+}
+
+.musicSubmit-form input[type="submit"] {
+  background-color: blue;
+  color: #fff;
+}
+
+.delete-button {
+  background-color: red;
+  color: #fff;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.musicUpdatemodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.musicUpdatemodal form {
+  width: 100%;
+}
+
+.musicUpdatemodal label {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  bottom: 0;
+}
+
+.footer p {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
 }

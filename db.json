@@ -1,0 +1,61 @@
+{
+  "musicList": [
+    {
+      "id": "1",
+      "albumImage": "/TafirMusicStore/Store/chronixx 2024-06-21 at 17.24.30_72a84388.jpg",
+      "albumTitle": "Black is beautiful",
+      "albumArtist": "Chronixx",
+      "albumTrack": "/TafirMusicStore/Store/Chronixx 2024-06-21 at 16.49.20_700d0573.mp3",
+       "musicId": "1"
+    },
+    {
+      "id": "2",
+      "albumImage": "/TafirMusicStore/Store/Da baby 2024-06-21 at 17.51.29_8754dee9.jpg",
+      "albumTitle": "Rockstar",
+      "albumArtist": "Da Baby",
+      "albumTrack": "/TafirMusicStore/Store/Da baby Audio 2024-06-21 at 17.45.59_f9c65e48.mp3",
+      "musicId": "2"
+    },
+    {
+      "id": "3",
+      "albumImage": "/TafirMusicStore/Store/Jadakiss.jpg",
+      "albumTitle": "Lord give me a sign",
+      "albumArtist": "Jadakiss ft DMX",
+      "albumTrack": "/TafirMusicStore/Store/DMX Jadakiss 2024-06-19 at 12.08.54_58df01c7.mp3",
+      "musicId": "3"
+    },
+    {
+      "id": "4",
+      "albumImage": "/TafirMusicStore/Store/Feels 2024-06-21 at 17.24.32_2373d321.jpg",
+      "albumTitle": "Feels",
+      "albumArtist": "Pharell Williams ft Calvin Harris",
+      "albumTrack": "/TafirMusicStore/Store/Feels 2024-06-21 at 16.43.54_be78b614.mp3",
+      "musicId": "4"
+    },
+    {
+      "id": "5",
+      "albumImage": "/TafirMusicStore/Store/sia 1.jpg",
+      "albumTitle": "California Dreaming",
+      "albumArtist": "Sia",
+      "albumTrack": "/TafirMusicStore/Store/Sia 2024-06-19 at 11.59.04_008aa38b.mp3",
+      "musicId": "5"
+    },
+    {
+      "id": "6",
+      "albumImage": "/TafirMusicStore/Store/Sia 2_.jpg",
+      "albumTitle": "Genius",
+      "albumArtist": "Sia",
+      "albumTrack": "/TafirMusicStore/Store/Sia Lsd Audio 2024-06-19 at 15.28.25_eef911c9.mp3",
+      "musicId": "6"
+    },
+    {
+      "id": "8",
+      "albumImage": "/TafirMusicStore/Store/Sia 2_.jpg",
+      "albumTitle": "Genius",
+      "albumArtist": "Sia",
+      "albumTrack": "/TafirMusicStore/Store/Sia Lsd Audio 2024-06-19 at 15.28.25_eef911c9.mp3",
+      "musicId": "8"
+    }
+    
+  ]
+}
